@@ -3,18 +3,18 @@ pipeline {
     stages {
         stage( 'Build' ) {
             steps {
-                bat "mvn clean -f hello-world"
+                bat "mvn clean"
             }
         }
         stage( 'Test' ) {
             steps {
-                bat "mvn test -f hello-world"
+                bat "mvn test"
                 
             }
         }
         stage( 'Deploy' ) {
             steps {
-                bat "mvn package -f hello-world"
+                bat "mvn package"
                 
             }
         }
